@@ -14,4 +14,11 @@ public struct Spring
 
         return -force;
     }
+    
+    public readonly Vector2 CalculateForce(Vector2 displacement, Vector2 velocity)
+    {
+        var force = stiffness * displacement - damper * velocity;
+
+        return force;
+    }
 }
